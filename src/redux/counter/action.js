@@ -1,5 +1,5 @@
 import { DECREMENT, INCREMENT } from "./actionTypes";
-
+// action creactor
 export const increment = (value) => {
   return {
     type: INCREMENT,
