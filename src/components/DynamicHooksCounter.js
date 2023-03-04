@@ -1,14 +1,15 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import {
   dynamicDecrement,
   dynamicIncrement,
 } from "../redux/dynamicCounter/actions";
 
 const DynamicHooksCounter = () => {
-  const count = getSelection((state) => state.value);
+  const count = useSelector((state) => state.dynamicCounter.value);
+  console.log(count);
   const dispatch = useDispatch();
-  const incrementHandler = (value) => {
+  const incrementHandler = () => {
     dispatch(dynamicIncrement(value));
   };
   const decrementHandler = (value) => {

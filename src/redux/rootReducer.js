@@ -2,9 +2,9 @@ import { combineReducers } from "redux";
 import counterReducer from "./counter/counterReducer";
 import dynamicReducer from "./dynamicCounter/dynamicReducer";
 
-const rootStore = combineReducers({
+const rootReducer = combineReducers({
   counter: counterReducer,
-  dynamicResucer: dynamicReducer,
+  dynamicCounter: dynamicReducer,
 });
 
-export default rootStore;
+export default rootReducer;

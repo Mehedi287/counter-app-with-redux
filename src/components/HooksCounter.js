@@ -3,7 +3,7 @@ import { increment } from "./../redux/counter/action";
 import { decrement } from "../redux/counter/action";
 
 const HooksCounter = () => {
-  const count = useSelector((state) => state.value);
+  const count = useSelector((state) => state.counter.value);
   const dispatch = useDispatch();
   const incrementHandler = (value) => {
     dispatch(increment(value));
@@ -17,13 +17,13 @@ const HooksCounter = () => {
       <div className="flex space-x-3">
         <button
           className="bg-indigo-400 text-white px-3 py-2 rounded shadow"
-          onClick={() => incrementHandler(10)}
+          onClick={incrementHandler}
         >
           Increment
         </button>
         <button
           className="bg-red-400 text-white px-3 py-2 rounded shadow"
-          onClick={() => decrementHandler(5)}
+          onClick={decrementHandler}
         >
           Decrement
         </button>
